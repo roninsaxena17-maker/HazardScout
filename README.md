@@ -1,89 +1,119 @@
 # HazardScout
-HazardScout is a robot that can be controlled from a distance. It is built to check places that may be dangerous and to watch the conditions around it.
+A remote control robot used to inspect potentially dangerous areas.
 
-Project Description
+Overview
 
-HazardScout is a project about robots that explores places that may be unsafe or hard for people to reach. HazardScout uses sensors to gather data about the environment to find obstacles that're close and to send the data to a dashboard that people can watch. HazardScout mixes robotics, computer systems putting sensors together and wireless talk to make a real inspection robot that people can use.
+HazardScout is a robot project which inspects potentially dangerous or difficult to reach areas. The robot utilises sensors to record information about the surrounding area to detect nearby hazards and display data on a dashboard. The robot combines robotics, sensor integration of computer systems and wireless communication to create a useful inspection robot.
 
 Objectives
 
-Build a HazardScout robot that can be controlled from a distance.
+Create a remote control robot for HazardScout.
 
-Monitor the temperature, humidity and gas levels in the environment.
+Monitor temperature, humidity and gas levels in the area.
 
-Detect obstacles with a sensor.
+Detect hazards using a sensor.
 
-Send sensor readings to a dashboard.
+Display readings from the sensors on a dashboard.
 
-Explore whether a camera can let HazardScout do inspection.
+Investigate using a camera for HazardScout to inspect.
 
 Features
 
-control that uses a FlySky FS-i6 transmitter.
+Remote control using a FS-i6 transmitter.
 
-Obstacle detection that uses an HC-SR04 sensor.
+Obstacle detection using an HC-SR04 sensor.
 
-Temperature and humidity monitoring that uses a DHT22 sensor.
+Temperature and humidity monitoring using a DHT22 sensor.
 
-Smoke level monitoring that uses an MQ-2 sensor.
+Smoke detection using an MQ-2 sensor.
 
-LED and buzzer alerts that warn about obstacles.
+Alerts using LED and buzzer.
 
-Sensor data logging and viewing that uses ThingSpeak.
+Recording and displaying sensor data using ThingSpeak.
 
-Control and data processing that runs on an ESP32.
+Everything is controlled and processed using an ESP32.
 
-Hardware Components
+Parts
 
-Component | Purpose
+Part
 
-ESP32 Main microcontroller
-
-FlySky FS-i6 transmitter | Remote control
-
-HC-SR04 ultrasonic sensor | Obstacle detection
-
-DHT22 sensor | Temperature and humidity monitoring
-
-MQ-2 sensor | Gas and smoke level monitoring
-
-LED | Visual alert
-
-Buzzer Audible alert
-
-DC gear motors | Robot movement
-
-Motor driver | Motor control
-
-Battery | Power supply
-
-ESP32-CAM | Planned visual inspection
-
-Wokwi Simulation
-
-HazardScout’s first sensor system is being made and tested with Wokwi.
-
-The simulation includes:
+Purpose
 
 ESP32
 
-HC-SR04 ultrasonic sensor
+Main microcontroller.
 
-DHT22 temperature and humidity sensor
+FlySky FS-i6
 
-MQ-2 gas sensor
+Remote control.
 
-LED and buzzer
+HC-SR04
 
-Sensor readings are sent to ThingSpeak, where people can see them on graphs and in dashboard fields.
+Obstacle detection.
+
+DHT22
+
+Temperature and humidity monitoring.
+
+MQ-2
+
+Gas and smoke monitoring.
+
+LED
+
+Visual alert.
+
+Buzzer
+
+Audio alert.
+
+DC Gear Motors
+
+Robot movement.
+
+Motor Driver
+
+Controlling the motors.
+
+Battery
+
+Power supply.
+
+ESP32-CAM
+
+For visual inspection (planned).
+
+Wokwi Simulation
+
+HazardScout has been created with its initial sensor system using Wokwi.
+
+This has the following components:
+
+ESP32
+
+HC-SR04 Sensor
+
+DHT22 Sensor (temperature and humidity)
+
+MQ-2 Sensor (gas)
+
+LED and Buzzer.
+
+The sensor data is sent to ThingSpeak to be displayed to users in graphs and on the dashboard.
 
 ThingSpeak Dashboard
 
-ThingSpeak stores. Shows the sensor data that comes from the ESP32.
+This is where the sensor data is stored. It displays the data from the sensors on the ESP32.
 
-The dashboard includes:
+The dashboard displays:
 
 Distance (cm)
+
+Temperature ( , C)
+
+Humidity (%)
+
+MQ-2 (Analog Sensor)
 
 Temperature (, °C)
 
