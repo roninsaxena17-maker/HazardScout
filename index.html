@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HazardScout | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="dashboard">
+
+    <header class="topbar">
+      <div>
+        <h1>HAZARDSCOUT</h1>
+        <p>REMOTE INSPECTION SYSTEM</p>
+      </div>
+
+      <div class="simulation-status">
+        <span class="status-dot"></span>
+        SIMULATION MODE
+      </div>
+    </header>
+
+    <!-- Sensor telemetry -->
+    <section class="telemetry-section">
+      <div class="section-heading">
+        <h2>Robot Telemetry</h2>
+        <p>Live environmental monitoring</p>
+      </div>
+
+      <div class="sensor-grid">
+
+        <article class="sensor-card">
+          <p class="sensor-label">DISTANCE</p>
+          <div class="sensor-value">
+            <span id="distance">--</span>
+            <span class="sensor-unit">cm</span>
+          </div>
+          <p class="sensor-note">Ultrasonic sensor</p>
+        </article>
+
+        <article class="sensor-card">
+          <p class="sensor-label">TEMPERATURE</p>
+          <div class="sensor-value">
+            <span id="temperature">--</span>
+            <span class="sensor-unit">°C</span>
+          </div>
+          <p class="sensor-note">DHT11 sensor</p>
+        </article>
+
+        <article class="sensor-card">
+          <p class="sensor-label">HUMIDITY</p>
+          <div class="sensor-value">
+            <span id="humidity">--</span>
+            <span class="sensor-unit">%</span>
+          </div>
+          <p class="sensor-note">DHT11 sensor</p>
+        </article>
+
+        <article class="sensor-card">
+          <p class="sensor-label">GAS LEVEL</p>
+          <div class="sensor-value">
+            <span id="gas">--</span>
+          </div>
+          <p class="sensor-note">MQ-2 analog</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Sensor history -->
+    <section class="history-section">
+      <div class="section-heading">
+        <h2>Sensor History</h2>
+        <p>Live trends from the robot sensors</p>
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="panel chart-card">
+          <div class="panel-header">
+            <div>
+              <h3>Distance</h3>
+              <p class="chart-subtitle">Ultrasonic sensor · cm</p>
+            </div>
+            <span class="chart-indicator distance-color"></span>
+          </div>
+          <div class="chart-container">
+            <canvas id="distanceChart"></canvas>
+          </div>
+        </article>
+
+        <article class="panel chart-card">
+          <div class="panel-header">
+            <div>
+              <h3>Temperature</h3>
+              <p class="chart-subtitle">DHT11 sensor · °C</p>
+            </div>
+            <span class="chart-indicator temperature-color"></span>
+          </div>
+          <div class="chart-container">
+            <canvas id="temperatureChart"></canvas>
+          </div>
+        </article>
+
+        <article class="panel chart-card">
+          <div class="panel-header">
+            <div>
+              <h3>Humidity</h3>
+              <p class="chart-subtitle">DHT11 sensor · %</p>
+            </div>
+            <span class="chart-indicator humidity-color"></span>
+          </div>
+          <div class="chart-container">
+            <canvas id="humidityChart"></canvas>
+          </div>
+        </article>
+
+        <article class="panel chart-card">
+          <div class="panel-header">
+            <div>
+              <h3>Gas Level</h3>
+              <p class="chart-subtitle">MQ-2 analog reading</p>
+            </div>
+            <span class="chart-indicator gas-color"></span>
+          </div>
+          <div class="chart-container">
+            <canvas id="gasChart"></canvas>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- System status and hazard alerts -->
+    <section class="main-grid">
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>System Status</h2>
+          <span class="panel-tag">ROBOT</span>
+        </div>
+
+        <div class="system-status-box">
+          <span class="status-dot" id="system-status-dot"></span>
+          <p id="system-status">Waiting for sensor data</p>
+        </div>
+
+        <p class="status-description" id="status-description">
+          Sensor simulation is starting
+        </p>
+      </article>
+
+      <article class="panel alerts-panel">
+        <div class="panel-header">
+          <div>
+            <h2>Hazard Alerts</h2>
+            <p class="chart-subtitle">Live threshold monitoring</p>
+          </div>
+          <span class="panel-tag" id="alert-count">0 ACTIVE</span>
+        </div>
+
+        <div id="alert-list" class="alert-list">
+          <div class="alert-item alert-normal">
+            <span class="alert-indicator green"></span>
+            <div>
+              <strong>System initializing</strong>
+              <span>Waiting for sensor readings</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="alert-footnote">
+          Demo thresholds only · Not calibrated for real-world safety
+        </p>
+      </article>
+
+    </section>
+
+    <!-- Alert history -->
+    <section class="panel alert-history-panel">
+      <div class="panel-header">
+        <div>
+          <h2>Alert History</h2>
+          <p class="chart-subtitle">Recent simulated system events</p>
+        </div>
+
+        <span class="panel-tag" id="history-count">0 EVENTS</span>
+      </div>
+
+      <div id="alert-history-list" class="alert-history-list">
+        <div class="history-empty">
+          No events recorded yet
+        </div>
+      </div>
+
+      <p class="alert-footnote">
+        Alert history is stored for this dashboard session only
+      </p>
+    </section>
+
+    <!-- Camera -->
+    <section class="panel camera-panel">
+      <div class="panel-header">
+        <h2>Camera Feed</h2>
+        <span class="panel-tag">ESP32-CAM</span>
+      </div>
+
+      <div class="camera-view">
+        <div class="camera-icon">📷</div>
+        <p>Camera not connected</p>
+        <small>ESP32-CAM feed will appear here</small>
+      </div>
+    </section>
+
+    <footer>
+      HAZARDSCOUT PROJECT · SENSOR SIMULATION
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
