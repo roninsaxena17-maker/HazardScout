@@ -142,3 +142,27 @@ MQ-2 analog sensor reading
 | MQ-2                    | AO (Analog Output) | GPIO 34       |
 | MPU-6050                | SDA                | GPIO 21       |
 |                         | SCL                | GPIO 22       |
+
+
+
+# 2. ESP32-CAM Pin Mapping
+
+| Camera signal | ESP32-CAM GPIO |
+| ------------- | -------------- |
+| PWDN          | 32             |
+| RESET         | -1             |
+| XCLK          | 0              |
+| SIOD          | 26             |
+| SIOC          | 27             |
+| Y9            | 35             |
+| Y8            | 34             |
+| Y7            | 39             |
+| Y6            | 36             |
+| Y5            | 21             |
+| Y4            | 19             |
+| Y3            | 18             |
+| Y2            | 5              |
+| VSYNC         | 25             |
+| HREF          | 23             |
+| PCLK          | 22             |
+| Flash LED     | 4              |
