@@ -35,29 +35,29 @@ Everything is controlled and processed using an ESP32.
 
 Parts:
 
-Part                                              Purpose
+Part -                                             Purpose
 
-ESP32                                             Main microcontroller.
+ESP32 -                                            Main microcontroller.
 
-FlySky FS-i6                                      Remote control.
+FlySky FS-i6 -                                     Remote control.
 
-HC-SR04                                           Obstacle detection.
+HC-SR04 -                                          Obstacle detection.
 
-DHT11                                             Temperature and humidity monitoring.
+DHT11 -                                            Temperature and humidity monitoring.
 
-MQ-2                                              Gas and smoke monitoring.
+MQ-2 -                                             Gas and smoke monitoring.
 
-LED                                               Visual alert.
+LED -                                              Visual alert.
 
-Buzzer                                            Audio alert.
+Buzzer -                                           Audio alert.
 
-DC Gear Motors                                    Robot movement.
+DC Gear Motors -                                   Robot movement.
 
-Motor Driver                                      Controlling the motors.
+Motor Driver -                                     Controlling the motors.
 
-Battery                                           Power supply.
+Battery -                                          Power supply.
 
-ESP32-CAM                                         For visual inspection (planned).
+ESP32-CAM -                                        For visual inspection (planned).
 
 
 Wokwi Simulation:                 
