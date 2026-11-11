@@ -101,8 +101,10 @@ MQ-2 analog sensor reading
 <img width="1470" height="956" alt="Screenshot 2026-11-07 at 3 54 18 PM" src="https://github.com/user-attachments/assets/ce46be4d-70ec-41fe-b2d5-2f2ecb952766" />
 <img width="1470" height="956" alt="Screenshot 2026-11-07 at 3 54 11 PM" src="https://github.com/user-attachments/assets/9d80ec3c-cb9a-4e96-97aa-ef942c3e1f03" />
 <img width="1470" height="956" alt="Screenshot 2026-11-07 at 3 58 03 PM" src="https://github.com/user-attachments/assets/fdc85809-d4a7-4955-b034-651f9946810c" />
-<img width="1470" height="956" alt="Screenshot 2026-11-07 at 3 47 36 PM" src="https://github.com/user-attachments/assets/f94fce0f-a5dd-47aa-9395-28aefe17379e" />
-<img width="1470" height="956" alt="Screenshot 2026-11-07 at 3 47 13 PM" src="https://github.com/user-attachments/assets/9de8f294-f851-403d-b389-22543cd2bdd3" />
+<img width="1470" height="956" alt="Screenshot 2026-11-11 at 2 40 02 AM" src="https://github.com/user-attachments/assets/774f662c-4e94-476a-9b59-09cea5219dd5" />
+<img width="1470" height="956" alt="Screenshot 2026-11-11 at 2 40 17 AM" src="https://github.com/user-attachments/assets/f12d9b9d-80c2-43b4-a587-145a55f91b7f" />
+
+
 
 
 # 1. ESP32 Pin Mapping
