@@ -120,3 +120,25 @@ Temperature (, °C)
 Humidity (%)
 
 MQ-2 analog sensor reading
+
+
+
+# 1. ESP32 Pin Mapping
+
+| Component               | Component pin      | ESP32 GPIO    |
+| ----------------------- | ------------------ | ------------- |
+| FlySky FS-iA6B receiver | iBUS signal        | GPIO 16 (RX2) |
+| Left BTS7960            | RPWM               | GPIO 25       |
+|                         | LPWM               | GPIO 26       |
+|                         | R_EN               | GPIO 32       |
+|                         | L_EN               | GPIO 33       |
+| Right BTS7960           | RPWM               | GPIO 27       |
+|                         | LPWM               | GPIO 14       |
+|                         | R_EN               | GPIO 19       |
+|                         | L_EN               | GPIO 23       |
+| HC-SR04                 | TRIG               | GPIO 5        |
+|                         | ECHO               | GPIO 18       |
+| DHT11                   | DATA               | GPIO 4        |
+| MQ-2                    | AO (Analog Output) | GPIO 34       |
+| MPU-6050                | SDA                | GPIO 21       |
+|                         | SCL                | GPIO 22       |
