@@ -1,11 +1,11 @@
 # HazardScout
 A remote control robot used to inspect potentially dangerous areas.
 
-Overview
+Overview:
 
 HazardScout is a robot project which inspects potentially dangerous or difficult to reach areas. The robot utilises sensors to record information about the surrounding area to detect nearby hazards and display data on a dashboard. The robot combines robotics, sensor integration of computer systems and wireless communication to create a useful inspection robot.
 
-Objectives
+Objectives:
 
 Create a remote control robot for HazardScout.
 
@@ -17,7 +17,7 @@ Display readings from the sensors on a dashboard.
 
 Investigate using a camera for HazardScout to inspect.
 
-Features
+Features:
 
 Remote control using a FS-i6 transmitter.
 
@@ -33,58 +33,34 @@ Recording and displaying sensor data using ThingSpeak.
 
 Everything is controlled and processed using an ESP32.
 
-Parts
+Parts:
 
-Part
+Part                                              Purpose
 
-Purpose
+ESP32                                             Main microcontroller.
 
-ESP32
+FlySky FS-i6                                      Remote control.
 
-Main microcontroller.
+HC-SR04                                           Obstacle detection.
 
-FlySky FS-i6
+DHT11                                             Temperature and humidity monitoring.
 
-Remote control.
+MQ-2                                              Gas and smoke monitoring.
 
-HC-SR04
+LED                                               Visual alert.
 
-Obstacle detection.
+Buzzer                                            Audio alert.
 
-DHT22
+DC Gear Motors                                    Robot movement.
 
-Temperature and humidity monitoring.
+Motor Driver                                      Controlling the motors.
 
-MQ-2
+Battery                                           Power supply.
 
-Gas and smoke monitoring.
+ESP32-CAM                                         For visual inspection (planned).
 
-LED
 
-Visual alert.
-
-Buzzer
-
-Audio alert.
-
-DC Gear Motors
-
-Robot movement.
-
-Motor Driver
-
-Controlling the motors.
-
-Battery
-
-Power supply.
-
-ESP32-CAM
-
-For visual inspection (planned).
-
-Wokwi Simulation
-
+Wokwi Simulation:                 
 HazardScout has been created with its initial sensor system using Wokwi.
 
 This has the following components:
@@ -93,7 +69,7 @@ ESP32
 
 HC-SR04 Sensor
 
-DHT22 Sensor (temperature and humidity)
+DHT11 Sensor (temperature and humidity)
 
 MQ-2 Sensor (gas)
 
@@ -143,6 +119,7 @@ MQ-2 analog sensor reading
 | MPU-6050                | SDA                | GPIO 21       |
 |                         | SCL                | GPIO 22       |
 
+<img width="846" height="372" alt="Screenshot 2026-11-11 at 3 11 21 PM" src="https://github.com/user-attachments/assets/4ad6bee4-adf7-4a48-b704-efddb4d1ed18" />
 
 
 # 2. ESP32-CAM Pin Mapping
@@ -166,3 +143,6 @@ MQ-2 analog sensor reading
 | HREF          | 23             |
 | PCLK          | 22             |
 | Flash LED     | 4              |
+
+<img width="431" height="370" alt="Screenshot 2026-11-11 at 3 17 36 PM" src="https://github.com/user-attachments/assets/4410a5ae-31f8-4707-9ce4-dd79d3bd0a53" />
+
